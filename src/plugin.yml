@@ -16,7 +16,7 @@ commands:
   divshopforcecheck:
     description: Force check for new purchases.
     usage: /<command>
-    permission: divictushandler.apikey
+    permission: divictushandler.forcecheck
   divshopinfo:
     description: Information about the handler.
     usage: /<command>

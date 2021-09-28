@@ -26,7 +26,7 @@ while($row = $result->fetch_assoc()){
         array_push($globalJson->commands, $singlejson);
 }
 echo json_encode($globalJson);
-$updatesql = "UPDATE commands SET fetched=true WHERE forclient=true";
+$updatesql = "UPDATE commands SET fetched=true WHERE forclient=$clientid";
 $conn->query($updatesql);
 ?>
 

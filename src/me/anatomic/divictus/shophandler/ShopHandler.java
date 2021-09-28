@@ -37,7 +37,7 @@ public class ShopHandler extends JavaPlugin implements Listener {
         }
         this.saveConfig();
         BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
-        scheduler.scheduleSyncRepeatingTask(this, new TimerTask(this), 0L, 60L);
+        scheduler.scheduleSyncRepeatingTask(this, new TimerTask(this), 0L, 1200L);
 
         this.getCommand("divshopsetapikey").setExecutor(new SetAPIKeyCommand(this));
         this.getCommand("divshopshowapikey").setExecutor(new ShowAPIKeyCommand(this));
