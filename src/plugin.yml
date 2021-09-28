@@ -1,0 +1,29 @@
+name: DivictusShopHandler
+version: 1.0
+author: Anatomic
+main: me.anatomic.divictus.shophandler.ShopHandler
+api-version: 1.8
+
+commands:
+  divshopsetapikey:
+    description: Set the API Key for the Divictus shop
+    usage: /<command> apikey
+    permission: divictushandler.apikey
+  divshopshowapikey:
+    description: Show the API Key for the Divictus shop
+    usage: /<command>
+    permission: divictushandler.apikey
+  divshopforcecheck:
+    description: Force check for new purchases.
+    usage: /<command>
+    permission: divictushandler.apikey
+  divshopinfo:
+    description: Information about the handler.
+    usage: /<command>
+    permission: divictushandler.*
+
+permissions:
+  divictushandler.apikey:
+    description: You can view and set API keys.
+  divictushandler.forcecheck:
+    description: Force check for new purchases.

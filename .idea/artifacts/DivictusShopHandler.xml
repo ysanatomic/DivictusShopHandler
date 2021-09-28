@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DivictusShopHandler">
+    <output-path>$PROJECT_DIR$/out/artifacts/DivictusShopHandler</output-path>
+    <root id="archive" name="DivictusShopHandler.jar">
+      <element id="module-output" name="DivictusShopHandler" />
+    </root>
+  </artifact>
+</component>
