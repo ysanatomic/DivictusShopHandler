@@ -2,7 +2,8 @@ package me.anatomic.divictus.shophandler.network;
 
 import me.anatomic.divictus.shophandler.ShopHandler;
 import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.libs.com.google.gson.*;
+
+import com.google.gson.*;
 
 import java.io.IOException;
 import java.io.InputStream;

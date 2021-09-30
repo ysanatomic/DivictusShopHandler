@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/DivictusShopHandler</output-path>
     <root id="archive" name="DivictusShopHandler.jar">
       <element id="module-output" name="DivictusShopHandler" />
+      <element id="library" level="project" name="gson-2.8.2" />
     </root>
   </artifact>
 </component>
