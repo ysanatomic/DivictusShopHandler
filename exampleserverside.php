@@ -10,7 +10,7 @@ class GlobalJson {
 }
 
 
-$conn = new mysqli("localhost", "root", "", "somedb");
+$conn = new mysqli("localhost", "root", "", "db");
 $apikey = $_GET['apikey'];
 $sql = "SELECT id FROM clients WHERE apikey='$apikey'";
 $clientid = $conn->query($sql)->fetch_array()[0];

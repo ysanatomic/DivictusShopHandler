@@ -4,6 +4,7 @@ import me.anatomic.divictus.shophandler.ShopHandler;
 import org.bukkit.Bukkit;
 
 import com.google.gson.*;
+import org.bukkit.scheduler.BukkitScheduler;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -40,7 +41,13 @@ public class FetchNewCommands {
             for(JsonElement cmdEl: commandsArray){
                 JsonObject commandObj = cmdEl.getAsJsonObject();
                 String actualCommand = commandObj.get("cmd").getAsString();
-                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), actualCommand);
+                BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
+                scheduler.runTask(plugin, new Runnable() {
+                    @Override
+                    public void run() {
+                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), actualCommand);
+                    }
+                });
             }
             System.out.println("[DivictusShopHandler] Check Succeeded.");
 
