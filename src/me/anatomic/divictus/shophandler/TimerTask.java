@@ -13,7 +13,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Timer;
 
-public class TimerTask extends java.util.TimerTask {
+public class TimerTask implements Runnable {
 
     private final ShopHandler plugin;
 
@@ -23,6 +23,8 @@ public class TimerTask extends java.util.TimerTask {
 
     public void run(){
         //DO STUFF
+        System.out.println("[DivictusShopHandler] Starting Check.");
+
         FetchNewCommands networkHandler = new FetchNewCommands(plugin);
         networkHandler.fetchAndExecute();
     }

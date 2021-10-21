@@ -32,6 +32,7 @@ public class FetchNewCommands {
             try {
                 rootobj = root.getAsJsonObject(); //May be an array, may be an object.
             } catch (Exception e) {
+                System.out.println("[DivictusShopHandler] Check Failed.");
                 return;
             }
 
@@ -41,10 +42,13 @@ public class FetchNewCommands {
                 String actualCommand = commandObj.get("cmd").getAsString();
                 Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), actualCommand);
             }
+            System.out.println("[DivictusShopHandler] Check Succeeded.");
 
-        } catch(JsonIOException | IOException e) {
+        } catch(Exception e) {
             // intentionally blank
-            ;
+            System.out.println(e);
+            System.out.println("[DivictusShopHandler] Check Failed.");
+
         }
     }
 }

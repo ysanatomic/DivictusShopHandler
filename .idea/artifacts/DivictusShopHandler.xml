@@ -1,9 +1,9 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="DivictusShopHandler">
-    <output-path>$PROJECT_DIR$/out/artifacts/DivictusShopHandler</output-path>
+    <output-path>$USER_HOME$/Documents/MinecraftTestServer/plugins</output-path>
     <root id="archive" name="DivictusShopHandler.jar">
       <element id="module-output" name="DivictusShopHandler" />
-      <element id="library" level="project" name="gson-2.8.2" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/first_task_hashes/gson-2.8.2.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
